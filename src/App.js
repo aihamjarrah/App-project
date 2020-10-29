@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { Link, Route, Router } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import Cars from "./components/Cars";
-import About from "./components/about"
+import About from "./components/about";
+import AddCar from "./components/addCar"
 
 export default class App extends Component {
   render() {
@@ -11,26 +12,30 @@ export default class App extends Component {
       <Router>
         <div>
           <nav>
-            <ul>
-              <li>
-                <Link to="/home">Home</Link>
-              </li>
-              <li>
-                <Link to="/cars">Cars</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
+            <ul className="navBar">
+                <li>
+                  <Link to="/">Home</Link>
+                </li> ||&nbsp;
+               
+                <li>
+                  <Link to="/cars">Cars</Link>
+                </li> ||&nbsp;
+                <li>
+                  <Link to="/about">About</Link>
+                </li>
             </ul>
           </nav>
           <Route exact path="/">
-            <Home/>
+            <Home />
           </Route>
           <Route exact path="/cars">
-            <Cars/>
+            <Cars />
           </Route>
           <Route exact path="/about">
-            <About/>
+            <About />
+          </Route>
+          <Route exact path="/add-car">
+            <AddCar/>
           </Route>
         </div>
       </Router>

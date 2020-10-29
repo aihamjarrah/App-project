@@ -4,7 +4,7 @@ export default class Cars extends Component {
   render() {
     return (
       <div className="cars">
-        <h3>Cars</h3>
+        <h1>Cars</h1>
       </div>
     );
   }
